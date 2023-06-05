@@ -16,8 +16,11 @@
         </ul>
       </td>
       <td>
-        <p-button label="deposit" styleClass="p-button-raised"></p-button>
-        <p-button label="withdraw" styleClass="p-button-raised p-button-warning"></p-button>
+        <p-button label="deposit" styleClass="p-button-raised" (click)="navigateToDeposit(rowData.accountNumber)"></p-button>
+        <p-button label="withdraw" styleClass="p-button-raised p-button-warning" (click)="navigateToWithdrawal(rowData.accountNumber)"></p-button>
+      </td>
+      <td>
+        <p-button label="voir plus" ></p-button>
       </td>
 
     </tr>

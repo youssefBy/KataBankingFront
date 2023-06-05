@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="email">Email address</label>
+          <input type="email" formControlName="email" class="form-control" id="email"
+                 placeholder="Enter email" email="true" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password"
+                 required>
+        </div>
+        <div class="form-group mb-3" *ngIf="loginFailed">
+          <small id="loginError" class="form-text text-danger">Email or password incorrect.</small>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

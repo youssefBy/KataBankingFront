@@ -8,19 +8,26 @@ import {HttpClientModule} from "@angular/common/http";
 import {TableModule} from "primeng/table";
 import {ButtonModule} from "primeng/button";
 import { LoginComponent } from './component/login/login.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {PasswordModule} from "primeng/password";
+import { OperationComponent } from './component/operation/operation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    OperationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    FormsModule,
+    PasswordModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
